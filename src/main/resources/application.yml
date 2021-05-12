@@ -1,3 +1,13 @@
 micronaut:
   application:
     name: validacpfRest
+
+grpc:
+  client:
+    plaintext: true
+    max-retry-attempts: 10
+  channels:
+    validacpf:
+      address: 'localhost:50051'
+      plaintext: true
+      max-retry-attempts: 5
