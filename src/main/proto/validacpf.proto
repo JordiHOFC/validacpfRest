@@ -11,6 +11,10 @@ service ValidacpfService {
   rpc valida (ValidacpfRequest) returns (ValidacpfResponse) {}
 }
 
+message ErrorDetails{
+  int32 code=1;
+  string message=2;
+}
 message ValidacpfRequest {
   string cpf = 1;
 }
